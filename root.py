@@ -23,10 +23,14 @@
 4. Не забывайте добавлять комментарии к вашему коду.
 """
 
-
-a = int(input("Введите число: "))
-
-b = a ** 0.5
-
-print(b)
+while True:
+    a = int(input("Введите число: "))
+    try:
+       if a == "Exit" or a == "exit":
+           break
+       b = int(a)
+       c = b ** 0.5
+       print(c)
+    except ValueError as err:
+        print(err)
 
