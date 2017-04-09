@@ -1,6 +1,21 @@
-<<<<<<< HEAD
 # Игра "Пушка"
-=======
+def__init__(self,b):
+    """
+    Создаёт шарик в случайном месте игрового холста cavans,
+    при этом шарик не выходит за границы холста
+    ну или снаряд (при == False)
+    """
+    if b:
+        self._R = randint(Ball.minimal_radius, Ball.maximal_radius)
+        self._x = randint(0, screen_width-1-2 * self._R)
+        self._y = randint(0, screen_height-1-2 * self._R)
+        self._color = choice(available_colors)
+        self.Vx = randint(-2,+2)
+        self._Vy = randint(-2,+2)
+        while self._Vx == 0 and self._Vy == 0:
+            self._Vx = randint(-2,+2)
+            self._Vy = randint(-2,+2)
+
 class Gun:
    def_init_(self):
      self._x=0
@@ -15,4 +30,3 @@ class Gun:
       """
       получаем сняряд, запускаем его и возвращаем дял запоминания в список снарядов
       """
->>>>>>> 39f78a196b84add718853cc87f5cfe19512e6a4e
