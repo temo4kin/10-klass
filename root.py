@@ -6,9 +6,6 @@
 Задание:
 1. Вывод результата всё ещё оставляет желать лучшего. Добавьте к выводимому
    значению пояснение.
-   
-"""
-
 while True:
     a = input("Введите число: ")
     try:
@@ -17,8 +14,7 @@ while True:
        b = int(a)
        c = b ** 0.5
        print(c)
-<<<<<<< HEAD
-       except ValueError as err:
+     except ValueError as err:
            print(err).
 3. Добавьте обработку исключений - при возникновении ошибки из-за неправильно
    введеного значения пользователем, программа должна продолжить работу,
@@ -27,18 +23,13 @@ while True:
 """
 
 while True:
-    a = int(input("Введите число: "))
+    a = input ("Введите число: ")
     try:
-       if a == "Exit" or a == "exit":
+        if a == "Exit" or a == "exit":
            break
-       b = int(a)
-       c = b ** 0.5
-       print(c)
+        b = int (a)
+        c = b ** 0.5
+        print (c)
     except ValueError as err:
         print(err)
-
-=======
-    except ValueError as err:
-           print(err)
-           continue
->>>>>>> 50e07857a53cdfaaf57170d6dd6a6e8f9eb22cea
+        continue
